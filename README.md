@@ -1,4 +1,4 @@
-# Scala SBT Giter8 Template
+# A [Giter8][g8]/[SBT][sbt]/[Scala][scala] template.
 
 A Giter8 template for a fully configured Scala SBT single but multibuild ready project. It is configured in a slightly opinionated but mostly dependency free fashion.
 
@@ -7,3 +7,7 @@ All versions will always stay hardcoded as opposed to being chooseable or automa
 ```bash
 sbt new DevInsideYou/scala-seed.g8
 ```
+
+[g8]: http://www.foundweekends.org/giter8/
+[sbt]: https://www.scala-sbt.org/
+[scala]: https://www.scala-lang.org/
