@@ -1,0 +1,8 @@
+.bloop/
+.idea/
+.metals/
+boot/
+lib_managed/
+project/plugins/project/
+src_managed/
+target/
