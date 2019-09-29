@@ -1,4 +1,4 @@
-# A [Giter8][g8]/[SBT][sbt]/[Scala][scala] template.
+# A [Giter8][g8]/[SBT][sbt]/[Scala][scala] template
 
 A Giter8 template for a fully configured Scala SBT single but multibuild ready project. It is configured in a slightly opinionated but mostly dependency free fashion.
 
