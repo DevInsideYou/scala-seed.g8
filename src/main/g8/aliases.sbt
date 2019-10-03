@@ -1,4 +1,4 @@
-import Build._
+import Util._
 
 addCommandAlias("cd", "project")
 addCommandAlias("root", "cd $name;format="norm"$")

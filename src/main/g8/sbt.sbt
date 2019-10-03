@@ -1,4 +1,4 @@
-import Build._
+import Util._
 
 Global / onChangedBuildSource := ReloadOnSourceChanges
 
@@ -15,19 +15,13 @@ ThisBuild / watchTriggeredMessage := Watch.clearScreenOnTrigger
 ThisBuild / watchForceTriggerOnAnyChange := true
 
 ThisBuild / shellPrompt := { state =>
-  val project =
-    Project
-      .extract(state)
-      .currentRef
-      .project
-
-  s"sbt:\${styled(project)}> "
+  s"\${prompt(projectName(state))}> "
 }
 
 ThisBuild / watchStartMessage := {
-  case (iteration, ProjectRef(build, project), commands) =>
+  case (iteration, ProjectRef(build, projectName), commands) =>
     Some {
       s"""|~\${commands.map(styled).mkString(";")}
-          |Monitoring source files for \${styled(project)}...""".stripMargin
+          |Monitoring source files for \${prompt(projectName)}...""".stripMargin
     }
 }

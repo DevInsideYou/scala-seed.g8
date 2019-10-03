@@ -4,8 +4,8 @@ import org.scalatestplus.scalacheck._
 trait TestSuite
     extends FunSuite
     with Matchers
-    with ScalaCheckPropertyChecks
     with BeforeAndAfterAll
-    with BeforeAndAfterEach {
+    with BeforeAndAfterEach
+    with ScalaCheckPropertyChecks {
   final protected type Assertion = compatible.Assertion
 }
