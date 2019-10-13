@@ -12,7 +12,13 @@ lazy val `$name;format="norm"$` =
         Dependencies.Test.`scalacheck-shapeless_1.14` % Test,
         Dependencies.Test.scalacheck % Test,
         Dependencies.Test.scalatest % Test
-      )
+      ),
+      Compile / console / scalacOptions --= Seq(
+        "-Ywarn-unused:_",
+        "-Xfatal-warnings" // -Wunused:_ in Scala 2.13.x
+      ),
+      Test / console / scalacOptions :=
+        (Compile / console / scalacOptions).value
     )
 
 ThisBuild / scalacOptions ++= Seq(
@@ -20,12 +26,7 @@ ThisBuild / scalacOptions ++= Seq(
   "-feature",
   "-language:_",
   "-Ypartial-unification", // Enabled by default since Scala 2.13.0
-  "-Ywarn-unused:_", // -Wunused in Scala 2.13.x
-  "-Xfatal-warnings"
-)
-
-ThisBuild / scalacOptions --= Seq(
-  "-Ywarn-unused:_", // -Wunused in Scala 2.13.x
+  "-Ywarn-unused:_", // -Wunused:_ in Scala 2.13.x
   "-Xfatal-warnings"
 )
 
