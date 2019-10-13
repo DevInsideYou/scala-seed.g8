@@ -24,7 +24,7 @@ ThisBuild / scalacOptions ++= Seq(
   "-Xfatal-warnings"
 )
 
-ThisBuild / Compile / console / scalacOptions --= Seq(
+ThisBuild / console / scalacOptions --= Seq(
   "-Ywarn-unused:_", // -Wunused in Scala 2.13.x
   "-Xfatal-warnings"
 )
