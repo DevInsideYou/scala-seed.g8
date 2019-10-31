@@ -1,5 +1,5 @@
 ThisBuild / organization := "$organization;format="lower,package"$"
-ThisBuild / scalaVersion := "2.12.8"
+ThisBuild / scalaVersion := "2.12.10"
 ThisBuild / version := "0.0.1-SNAPSHOT"
 
 lazy val `$name;format="norm"$` =
