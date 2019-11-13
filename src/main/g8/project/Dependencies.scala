@@ -1,6 +1,11 @@
 import sbt._
 
 object Dependencies {
+  object CompilerPlugins {
+    val `kind-projector` =
+      "org.typelevel" %% "kind-projector" % "0.10.3"
+  }
+
   object Test {
     val `scalacheck-shapeless_1.14` =
       "com.github.alexarchambault" %% "scalacheck-shapeless_1.14" % "1.2.3"
@@ -10,10 +15,5 @@ object Dependencies {
 
     val scalatest =
       "org.scalatest" %% "scalatest" % "3.0.8"
-  }
-
-  object CompilerPlugins {
-    val `kind-projector` =
-      "org.typelevel" %% "kind-projector" % "0.10.3"
   }
 }
