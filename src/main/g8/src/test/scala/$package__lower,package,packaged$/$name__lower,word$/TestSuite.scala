@@ -1,9 +1,11 @@
+package $package;format="lower,package"$
+package $name;format="lower,word"$
+
 import org.scalatest._
-import org.scalatest.funsuite._
 import org.scalatestplus.scalacheck._
 
 trait TestSuite
-    extends AnyFunSuite
+    extends FunSuite
     with Matchers
     with BeforeAndAfterAll
     with BeforeAndAfterEach

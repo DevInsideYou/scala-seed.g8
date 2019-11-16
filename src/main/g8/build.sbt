@@ -1,5 +1,5 @@
 ThisBuild / organization := "$organization;format="lower,package"$"
-ThisBuild / scalaVersion := "2.12.10"
+ThisBuild / scalaVersion := "2.13.1"
 ThisBuild / version := "0.0.1-SNAPSHOT"
 
 lazy val `$name;format="norm"$` =
@@ -14,8 +14,8 @@ lazy val `$name;format="norm"$` =
         Dependencies.Test.scalatest % Test
       ),
       Compile / console / scalacOptions --= Seq(
-        "-Ywarn-unused:_",
-        "-Xfatal-warnings" // -Wunused:_ in Scala 2.13.x
+        "-Wunused:_",
+        "-Xfatal-warnings"
       ),
       Test / console / scalacOptions :=
         (Compile / console / scalacOptions).value
@@ -25,9 +25,9 @@ ThisBuild / scalacOptions ++= Seq(
   "-deprecation",
   "-feature",
   "-language:_",
-  "-Ypartial-unification", // Enabled by default since Scala 2.13.0
-  "-Ywarn-unused:_", // -Wunused:_ in Scala 2.13.x
-  "-Xfatal-warnings"
+  "-Wunused:_",
+  "-Xfatal-warnings",
+  "-Ymacro-annotations"
 )
 
 lazy val cctt: String =
