@@ -2,16 +2,21 @@ ThisBuild / organization := "$organization;format="lower,package"$"
 ThisBuild / scalaVersion := "2.13.1"
 ThisBuild / version := "0.0.1-SNAPSHOT"
 
+import Dependencies._
+
 lazy val `$name;format="norm"$` =
   project
     .in(file("."))
     .settings(
       name := "$name$",
-      addCompilerPlugin(Dependencies.CompilerPlugins.`kind-projector`),
+      addCompilerPlugin(org.typelevel.`kind-projector`),
       libraryDependencies ++= Seq(
-        Dependencies.Test.`scalacheck-shapeless_1.14` % Test,
-        Dependencies.Test.scalacheck % Test,
-        Dependencies.Test.scalatest % Test
+        com.github.alexarchambault.`scalacheck-shapeless_1.14`,
+        org.scalacheck.scalacheck,
+        org.scalatest.scalatest,
+      ).map(_ % Test),
+      dependencyOverrides ++= Seq(
+        org.scalatest.scalatest
       ),
       Compile / console / scalacOptions --= Seq(
         "-Wunused:_",
@@ -25,6 +30,7 @@ ThisBuild / scalacOptions ++= Seq(
   "-deprecation",
   "-feature",
   "-language:_",
+  "-unchecked",
   "-Wunused:_",
   "-Xfatal-warnings",
   "-Ymacro-annotations"
