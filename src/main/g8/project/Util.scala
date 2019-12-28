@@ -45,4 +45,7 @@ object Util {
 
   private val noopProcessLogger: ProcessLogger =
     ProcessLogger(_ => (), _ => ())
+
+  val Cctt: String =
+    "compile->compile;test->test"
 }

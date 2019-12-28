@@ -2,6 +2,16 @@ ThisBuild / organization := "$organization;format="lower,package"$"
 ThisBuild / scalaVersion := "2.13.1"
 ThisBuild / version := "0.0.1-SNAPSHOT"
 
+ThisBuild / scalacOptions ++= Seq(
+  "-deprecation",
+  "-feature",
+  "-language:_",
+  "-unchecked",
+  "-Wunused:_",
+  "-Xfatal-warnings",
+  "-Ymacro-annotations"
+)
+
 import Dependencies._
 
 lazy val `$name;format="norm"$` =
@@ -10,6 +20,9 @@ lazy val `$name;format="norm"$` =
     .settings(
       name := "$name$",
       addCompilerPlugin(org.typelevel.`kind-projector`),
+      libraryDependencies ++= Seq(
+        // main dependencies
+      ),
       libraryDependencies ++= Seq(
         com.github.alexarchambault.`scalacheck-shapeless_1.14`,
         org.scalacheck.scalacheck,
@@ -25,16 +38,3 @@ lazy val `$name;format="norm"$` =
       Test / console / scalacOptions :=
         (Compile / console / scalacOptions).value
     )
-
-ThisBuild / scalacOptions ++= Seq(
-  "-deprecation",
-  "-feature",
-  "-language:_",
-  "-unchecked",
-  "-Wunused:_",
-  "-Xfatal-warnings",
-  "-Ymacro-annotations"
-)
-
-lazy val cctt: String =
-  "compile->compile;test->test"
