@@ -1,4 +1,5 @@
 .bloop/
 .idea/
 .metals/
+metals.sbt
 target/
