@@ -3,6 +3,7 @@
 .metals/
 boot/
 lib_managed/
+metals.sbt
 project/plugins/project/
 src_managed/
 target/
