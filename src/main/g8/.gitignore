@@ -1,5 +1,6 @@
 .bloop/
 .idea/
 .metals/
+*.worksheet.sc
 metals.sbt
 target/
