@@ -1,6 +1,7 @@
 .bloop/
 .idea/
 .metals/
+*.worksheet.sc
 boot/
 lib_managed/
 metals.sbt
