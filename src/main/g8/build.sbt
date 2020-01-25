@@ -27,6 +27,7 @@ lazy val `$name;format="norm"$` =
         com.github.alexarchambault.`scalacheck-shapeless_1.14`,
         org.scalacheck.scalacheck,
         org.scalatest.scalatest,
+        org.scalatestplus.`scalatestplus-scalacheck`
       ).map(_ % Test),
       dependencyOverrides ++= Seq(
         org.scalatest.scalatest
