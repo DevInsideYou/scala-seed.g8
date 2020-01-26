@@ -1,3 +1,5 @@
+import Dependencies._
+
 ThisBuild / organization := "$organization;format="lower,package"$"
 ThisBuild / scalaVersion := "2.13.1"
 ThisBuild / version := "0.0.1-SNAPSHOT"
@@ -11,8 +13,6 @@ ThisBuild / scalacOptions ++= Seq(
   "-Xfatal-warnings",
   "-Ymacro-annotations"
 )
-
-import Dependencies._
 
 lazy val `$name;format="norm"$` =
   project
