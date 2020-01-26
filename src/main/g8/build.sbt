@@ -29,9 +29,6 @@ lazy val `$name;format="norm"$` =
         org.scalatest.scalatest,
         org.scalatestplus.`scalatestplus-scalacheck`
       ).map(_ % Test),
-      dependencyOverrides ++= Seq(
-        org.scalatest.scalatest
-      ),
       Compile / console / scalacOptions --= Seq(
         "-Wunused:_",
         "-Xfatal-warnings"
