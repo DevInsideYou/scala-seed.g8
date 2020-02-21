@@ -18,7 +18,7 @@ object Dependencies {
 
     case object scalatest {
       val scalatest =
-        "org.scalatest" %% "scalatest" % "3.1.0"
+        "org.scalatest" %% "scalatest" % "3.1.1"
     }
 
     case object scalatestplus {
