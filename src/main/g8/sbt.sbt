@@ -11,15 +11,11 @@ ThisBuild / includePluginResolvers := true
 ThisBuild / turbo := true
 ThisBuild / useSuperShell := false
 
-
 ThisBuild / watchBeforeCommand := Watch.clearScreen
 ThisBuild / watchTriggeredMessage := Watch.clearScreenOnTrigger
 ThisBuild / watchForceTriggerOnAnyChange := true
 
-ThisBuild / shellPrompt := { state =>
-  s"\${prompt(projectName(state))}> "
-}
-
+ThisBuild / shellPrompt := { state => s"${prompt(projectName(state))}> " }
 ThisBuild / watchStartMessage := {
   case (iteration, ProjectRef(build, projectName), commands) =>
     Some {
