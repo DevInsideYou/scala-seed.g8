@@ -1,4 +1,5 @@
 .bloop/
+.dotty-ide*
 .idea/
 .metals/
 *.worksheet.sc
