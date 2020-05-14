@@ -19,4 +19,3 @@ trait TestSuite
   final protected type Assertion =
     org.scalatest.compatible.Assertion
 }
-
