@@ -11,11 +11,11 @@ import org.scalatestplus.scalacheck.ScalaCheckPropertyChecks
 
 trait TestSuite
     extends AnyFunSuite
-    with should.Matchers
-    with BeforeAndAfterAll
-    with BeforeAndAfterEach
-    with ScalaCheckPropertyChecks
-    with ScalacheckShapeless {
+       with should.Matchers
+       with BeforeAndAfterAll
+       with BeforeAndAfterEach
+       with ScalaCheckPropertyChecks
+       with ScalacheckShapeless {
   final protected type Assertion =
     org.scalatest.compatible.Assertion
 }
