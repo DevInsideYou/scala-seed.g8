@@ -27,7 +27,8 @@ lazy val `$name;format="norm"$` =
         com.github.alexarchambault.`scalacheck-shapeless_1.14`,
         org.scalacheck.scalacheck,
         org.scalatest.scalatest,
-        org.scalatestplus.`scalacheck-1-14`
+        org.scalatestplus.`scalacheck-1-14`,
+        org.typelevel.`discipline-scalatest`
       ).map(_ % Test),
       Compile / console / scalacOptions --= Seq(
         "-Wunused:_",
