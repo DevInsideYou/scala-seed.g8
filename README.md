@@ -8,9 +8,14 @@ All versions will always stay hardcoded as opposed to being chooseable or automa
 sbt new devinsideyou/scala-seed.g8
 ```
 
+or
+
+```bash
+g8 devinsideyou/scala-seed
+```
+
 [![Watch on YouTube](resources/thumbnail_youtube.jpg)](https://www.youtube.com/watch?v=nD-p-cEKjHE "Watch on YouTube")
 
 [g8]: http://www.foundweekends.org/giter8/
 [sbt]: https://www.scala-sbt.org/
 [scala]: https://www.scala-lang.org/
-[supershell]: http://eed3si9n.com/super-shell-for-sbt
