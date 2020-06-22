@@ -8,6 +8,11 @@ object Dependencies {
           "com.github.alexarchambault" %% "scalacheck-shapeless_1.14" % "1.2.5"
       }
     }
+
+    case object olegpy {
+      val `better-monadic-for` =
+        "com.olegpy" %% "better-monadic-for" % "0.3.1"
+    }
   }
 
   case object org {
@@ -23,12 +28,12 @@ object Dependencies {
 
     case object scalatest {
       val scalatest =
-        "org.scalatest" %% "scalatest" % "3.1.2"
+        "org.scalatest" %% "scalatest" % "3.2.0"
     }
 
     case object scalatestplus {
       val `scalacheck-1-14` =
-        "org.scalatestplus" %% "scalacheck-1-14" % "3.1.2.0"
+        "org.scalatestplus" %% "scalacheck-1-14" % "3.2.0.0"
     }
 
     case object typelevel {
