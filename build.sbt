@@ -1,5 +1,9 @@
 enablePlugins(ScriptedPlugin)
 
+ThisBuild / scalaVersion := "2.12.12"
+ThisBuild / useSuperShell := false
+ThisBuild / autoStartServer := false
+
 name := "scala-seed"
 
 addCommandAlias("test", "g8Test")
