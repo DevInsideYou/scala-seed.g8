@@ -14,6 +14,7 @@ import org.typelevel.discipline.scalatest.FunSuiteDiscipline
 trait TestSuite
     extends AnyFunSuite
        with should.Matchers
+       with GivenWhenThen
        with BeforeAndAfterAll
        with BeforeAndAfterEach
        with ScalaCheckPropertyChecks
