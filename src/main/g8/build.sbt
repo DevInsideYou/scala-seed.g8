@@ -24,6 +24,7 @@ lazy val `$name;format="norm"$` =
 lazy val commonSettings = Seq(
   addCompilerPlugin(org.augustjune.`context-applied`),
   addCompilerPlugin(org.typelevel.`kind-projector`),
+  update / evictionWarningOptions := EvictionWarningOptions.empty,
   Compile / console / scalacOptions --= Seq(
     "-Wunused:_",
     "-Xfatal-warnings"
