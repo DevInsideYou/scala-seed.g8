@@ -9,7 +9,6 @@ ThisBuild / scalacOptions ++= Seq(
   "-feature",
   "-language:_",
   "-unchecked",
-  "-Wunused:_",
   "-Xfatal-warnings",
   "-Ymacro-annotations"
 )
