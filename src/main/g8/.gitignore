@@ -4,6 +4,7 @@
 .dotty-ide*
 .idea/
 .metals/
+.vscode/
 *.worksheet.sc
 metals.sbt
 target/

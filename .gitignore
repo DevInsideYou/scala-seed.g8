@@ -4,10 +4,7 @@
 .dotty-ide*
 .idea/
 .metals/
+.vscode/
 *.worksheet.sc
-boot/
-lib_managed/
 metals.sbt
-project/plugins/project/
-src_managed/
 target/
