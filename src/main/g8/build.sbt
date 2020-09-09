@@ -17,8 +17,8 @@ lazy val `$name;format="norm"$` =
   project
     .in(file("."))
     .settings(name := "$name$")
-    .settings(commonSettings: _*)
-    .settings(dependencies: _*)
+    .settings(commonSettings)
+    .settings(dependencies)
 
 lazy val commonSettings = Seq(
   addCompilerPlugin(org.augustjune.`context-applied`),
