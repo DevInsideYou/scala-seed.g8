@@ -1,0 +1,3 @@
+Global / excludeLintKeys ++= Set(
+  autoStartServer
+)
