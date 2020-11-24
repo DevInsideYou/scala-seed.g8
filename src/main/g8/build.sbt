@@ -4,15 +4,6 @@ ThisBuild / organization := "$organization;format="lower,package"$"
 ThisBuild / scalaVersion := "2.13.4"
 ThisBuild / version := "0.0.1-SNAPSHOT"
 
-ThisBuild / scalacOptions ++= Seq(
-  "-deprecation",
-  "-feature",
-  "-language:_",
-  "-unchecked",
-  "-Xfatal-warnings",
-  "-Ymacro-annotations"
-)
-
 lazy val `$name;format="norm"$` =
   project
     .in(file("."))
@@ -24,12 +15,8 @@ lazy val commonSettings = Seq(
   addCompilerPlugin(org.augustjune.`context-applied`),
   addCompilerPlugin(org.typelevel.`kind-projector`),
   update / evictionWarningOptions := EvictionWarningOptions.empty,
-  Compile / console / scalacOptions --= Seq(
-    "-Wunused:_",
-    "-Xfatal-warnings"
-  ),
-  Test / console / scalacOptions :=
-    (Compile / console / scalacOptions).value
+  Compile / console / scalacOptions --= (Scalac.Lint ++ Scalac.FatalWarnings),
+  Test / console / scalacOptions := (Compile / console / scalacOptions).value
 )
 
 lazy val dependencies = Seq(
