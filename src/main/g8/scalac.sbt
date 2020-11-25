@@ -1,4 +1,3 @@
-import Scalac._
 import Scalac.Keys._
 
 ThisBuild / scalacOptions ++= Seq(
@@ -12,24 +11,24 @@ ThisBuild / warnings := {
       "-Wconf:any:error", // for scalac warnings
       "-Xfatal-warnings" // for wartremover warts
     )
+  else if (lintOn.value)
+    Seq("-Wconf:any:warning")
   else
-    Seq(
-      "-Wconf:any:warning"
-    )
+    Seq("-Wconf:any:silent")
 }
+
+ThisBuild / lintOn :=
+  !sys.env.contains("LINT_OFF")
 
 ThisBuild / lint := {
   if (shouldLint.value)
-    Lint
+    Scalac.Lint
   else
     Seq.empty
 }
 
-ThisBuild / shouldLint := {
-  lazy val lintOn = !sys.env.contains("LINT_OFF")
-
-  insideCI.value || lintOn
-}
+ThisBuild / shouldLint :=
+  insideCI.value || lintOn.value
 
 ThisBuild / wartremoverWarnings := {
   if (shouldLint.value)

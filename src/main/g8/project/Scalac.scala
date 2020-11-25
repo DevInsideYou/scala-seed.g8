@@ -21,6 +21,9 @@ object Scalac {
     val warnings =
       settingKey[Seq[String]]("Configures warnings.")
 
+    val lintOn =
+      settingKey[Boolean]("""By default: !sys.env.contains("LINT_OFF")""")
+
     val shouldLint =
       settingKey[Boolean]("By default: true inside ci unless lint is off.")
   }
