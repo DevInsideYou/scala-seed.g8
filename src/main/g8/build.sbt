@@ -11,6 +11,7 @@ lazy val `$name;format="norm"$` =
     .settings(dependencies)
 
 lazy val commonSettings = Seq(
+  addCompilerPlugin(com.olegpy.`better-monadic-for`),
   addCompilerPlugin(org.augustjune.`context-applied`),
   addCompilerPlugin(org.typelevel.`kind-projector`),
   update / evictionWarningOptions := EvictionWarningOptions.empty,
