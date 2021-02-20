@@ -33,7 +33,7 @@ lazy val dependencies = Seq(
     com.github.alexarchambault.`scalacheck-shapeless_1.14`,
     org.scalacheck.scalacheck,
     org.scalatest.scalatest,
-    org.scalatestplus.`scalacheck-1-14`,
+    org.scalatestplus.`scalacheck-1-15`,
     org.typelevel.`discipline-scalatest`
   ).map(_ % Test)
 )
