@@ -12,6 +12,11 @@ addCommandAlias("r", "run")
 addCommandAlias("rs", "reStart")
 addCommandAlias("s", "reStop")
 addCommandAlias(
+  "styleCheck",
+  "scalafmtSbtCheck; scalafmtCheckAll; scalafixAll --check",
+)
+addCommandAlias("styleFix", "scalafixAll; scalafmtSbt; scalafmtAll")
+addCommandAlias(
   "up2date",
   "reload plugins; dependencyUpdates; reload return; dependencyUpdates",
 )
@@ -30,5 +35,7 @@ onLoadMessage +=
       |│ \${styled("r")}           │ run               │
       |│ \${styled("rs")}          │ reStart           │
       |│ \${styled("s")}           │ reStop            │
+      |│ \${styled("styleCheck")}  │ fmt & fix checks  │
+      |│ \${styled("styleFix")}    │ fix then fmt      │
       |│ \${styled("up2date")}     │ dependencyUpdates │
       |╰─────────────┴───────────────────╯""".stripMargin

@@ -7,6 +7,11 @@ object Dependencies {
         val `scalacheck-shapeless_1.14` =
           "com.github.alexarchambault" %% "scalacheck-shapeless_1.14" % "1.2.5"
       }
+
+      case object liancheng {
+        val `organize-imports` =
+          "com.github.liancheng" %% "organize-imports" % "0.5.0"
+      }
     }
 
     case object olegpy {
