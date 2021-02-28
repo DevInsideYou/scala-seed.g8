@@ -13,7 +13,7 @@ addCommandAlias("rs", "reStart")
 addCommandAlias("s", "reStop")
 addCommandAlias(
   "up2date",
-  "reload plugins; dependencyUpdates; reload return; dependencyUpdates"
+  "reload plugins; dependencyUpdates; reload return; dependencyUpdates",
 )
 
 onLoadMessage +=

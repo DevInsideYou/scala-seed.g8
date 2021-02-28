@@ -1,6 +1,6 @@
 enablePlugins(ScriptedPlugin)
 
-ThisBuild / scalaVersion := "2.12.12"
+ThisBuild / scalaVersion := "2.12.13"
 ThisBuild / useSuperShell := false
 ThisBuild / autoStartServer := false
 
@@ -13,5 +13,5 @@ scriptedLaunchOpts ++= Seq(
   "-Xmx1g",
   "-XX:ReservedCodeCacheSize=128m",
   "-Xss2m",
-  "-Dfile.encoding=UTF-8"
+  "-Dfile.encoding=UTF-8",
 )

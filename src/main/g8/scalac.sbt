@@ -2,14 +2,14 @@ import Scalac.Keys._
 
 ThisBuild / scalacOptions ++= Seq(
   "-language:_",
-  "-Ymacro-annotations"
+  "-Ymacro-annotations",
 ) ++ Seq("-encoding", "UTF-8") ++ warnings.value ++ lint.value
 
 ThisBuild / warnings := {
   if (insideCI.value)
     Seq(
       "-Wconf:any:error", // for scalac warnings
-      "-Xfatal-warnings" // for wartremover warts
+      "-Xfatal-warnings", // for wartremover warts
     )
   else if (lintOn.value)
     Seq("-Wconf:any:warning")
@@ -32,7 +32,10 @@ ThisBuild / shouldLint :=
 
 ThisBuild / wartremoverWarnings := {
   if (shouldLint.value)
-    Warts.all
+    Warts.allBut(
+      Wart.ImplicitConversion,
+      Wart.ImplicitParameter,
+    )
   else
     (ThisBuild / wartremoverWarnings).value
 }

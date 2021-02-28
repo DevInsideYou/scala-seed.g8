@@ -1,4 +1,4 @@
 Global / excludeLintKeys ++= Set(
   autoStartServer,
-  evictionWarningOptions
+  evictionWarningOptions,
 )

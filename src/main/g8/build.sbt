@@ -1,7 +1,7 @@
 import Dependencies._
 
 ThisBuild / organization := "$organization;format="lower,package"$"
-ThisBuild / scalaVersion := "2.13.4"
+ThisBuild / scalaVersion := "2.13.5"
 
 lazy val `$name;format="norm"$` =
   project
@@ -23,7 +23,7 @@ lazy val commonSettings = Seq(
       .filterNot(Scalac.FatalWarnings.toSet) :+ "-Wconf:any:silent"
   },
   Test / console / scalacOptions :=
-    (Compile / console / scalacOptions).value
+    (Compile / console / scalacOptions).value,
 )
 
 lazy val dependencies = Seq(
@@ -35,6 +35,6 @@ lazy val dependencies = Seq(
     org.scalacheck.scalacheck,
     org.scalatest.scalatest,
     org.scalatestplus.`scalacheck-1-15`,
-    org.typelevel.`discipline-scalatest`
-  ).map(_ % Test)
+    org.typelevel.`discipline-scalatest`,
+  ).map(_ % Test),
 )

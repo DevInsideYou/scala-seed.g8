@@ -6,7 +6,7 @@ object Scalac {
       "-Wdead-code",
       "-Wunused:_",
       "-Wvalue-discard",
-      "-Xlint:_"
+      "-Xlint:_",
     )
 
   val FatalWarnings =

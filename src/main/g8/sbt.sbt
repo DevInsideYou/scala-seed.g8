@@ -5,7 +5,7 @@ Global / onChangedBuildSource := ReloadOnSourceChanges
 Global / excludeLintKeys ++= Set(
   autoStartServer,
   turbo,
-  evictionWarningOptions
+  evictionWarningOptions,
 )
 
 Test / parallelExecution := false
