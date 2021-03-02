@@ -3,6 +3,7 @@ import Scalac.Keys._
 ThisBuild / scalacOptions ++= Seq(
   "-language:_",
   "-Ymacro-annotations",
+  "-Wunused:imports", // always on for OrganizeImports
 ) ++ Seq("-encoding", "UTF-8") ++ warnings.value ++ lint.value
 
 ThisBuild / warnings := {
