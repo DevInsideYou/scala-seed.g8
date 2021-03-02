@@ -7,7 +7,6 @@ import org.scalatest.funsuite.AnyFunSuite
 import org.scalatest.matchers.should
 import org.scalatestplus.scalacheck.ScalaCheckPropertyChecks
 import org.typelevel.discipline.scalatest.FunSuiteDiscipline
-import org.{ scalacheck => sc }
 
 trait TestSuite
     extends AnyFunSuite
@@ -19,17 +18,17 @@ trait TestSuite
        with ScalacheckShapeless
        with FunSuiteDiscipline {
   final protected type Arbitrary[A] =
-    sc.Arbitrary[A]
+    org.scalacheck.Arbitrary[A]
 
-  final protected val Arbitrary: sc.Arbitrary.type =
-    sc.Arbitrary
+  final protected val Arbitrary: org.scalacheck.Arbitrary.type =
+    org.scalacheck.Arbitrary
 
   final protected type Assertion =
     org.scalatest.compatible.Assertion
 
   final protected type Gen[+A] =
-    sc.Gen[A]
+    org.scalacheck.Gen[A]
 
-  final protected val Gen: sc.Gen.type =
-    sc.Gen
+  final protected val Gen: org.scalacheck.Gen.type =
+    org.scalacheck.Gen
 }
