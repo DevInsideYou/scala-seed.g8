@@ -13,9 +13,9 @@ addCommandAlias("rs", "reStart")
 addCommandAlias("s", "reStop")
 addCommandAlias(
   "styleCheck",
-  "scalafmtSbtCheck; scalafmtCheckAll; scalafixAll --check",
+  "scalafmtSbtCheck; scalafmtCheckAll; ca; scalafixAll --check",
 )
-addCommandAlias("styleFix", "scalafixAll; scalafmtSbt; scalafmtAll")
+addCommandAlias("styleFix", "ca; scalafixAll; scalafmtSbt; scalafmtAll")
 addCommandAlias(
   "up2date",
   "reload plugins; dependencyUpdates; reload return; dependencyUpdates",
