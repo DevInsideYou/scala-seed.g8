@@ -33,17 +33,17 @@ object Dependencies {
 
     case object scalatest {
       val scalatest =
-        "org.scalatest" %% "scalatest" % "3.2.6"
+        "org.scalatest" %% "scalatest" % "3.2.7"
     }
 
     case object scalatestplus {
       val `scalacheck-1-15` =
-        "org.scalatestplus" %% "scalacheck-1-15" % "3.2.6.0"
+        "org.scalatestplus" %% "scalacheck-1-15" % "3.2.7.0"
     }
 
     case object typelevel {
       val `discipline-scalatest` =
-        "org.typelevel" %% "discipline-scalatest" % "2.1.2"
+        "org.typelevel" %% "discipline-scalatest" % "2.1.3"
 
       val `kind-projector` =
         "org.typelevel" %% "kind-projector" % "0.11.3" cross CrossVersion.full
