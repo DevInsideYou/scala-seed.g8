@@ -6,18 +6,18 @@ addCommandAlias("ls", "projects")
 addCommandAlias("cd", "project")
 addCommandAlias("root", "cd $name;format="norm"$")
 addCommandAlias("c", "compile")
-addCommandAlias("ca", "test:compile")
+addCommandAlias("ca", "Test / compile")
 addCommandAlias("t", "test")
 addCommandAlias("r", "run")
 addCommandAlias("rs", "reStart")
 addCommandAlias("s", "reStop")
 addCommandAlias(
   "styleCheck",
-  "scalafmtSbtCheck; scalafmtCheckAll; test:compile; scalafixAll --check",
+  "scalafmtSbtCheck; scalafmtCheckAll; Test / compile; scalafixAll --check",
 )
 addCommandAlias(
   "styleFix",
-  "test:compile; scalafixAll; scalafmtSbt; scalafmtAll",
+  "Test / compile; scalafixAll; scalafmtSbt; scalafmtAll",
 )
 addCommandAlias(
   "up2date",
