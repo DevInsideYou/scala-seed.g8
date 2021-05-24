@@ -4,8 +4,8 @@ object Dependencies {
   case object com {
     case object github {
       case object alexarchambault {
-        val `scalacheck-shapeless_1.14` =
-          "com.github.alexarchambault" %% "scalacheck-shapeless_1.14" % "1.2.5"
+        val `scalacheck-shapeless_1.15` =
+          "com.github.alexarchambault" %% "scalacheck-shapeless_1.15" % "1.3.0"
       }
 
       case object liancheng {
