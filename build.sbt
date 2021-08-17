@@ -1,6 +1,6 @@
 enablePlugins(ScriptedPlugin)
 
-ThisBuild / scalaVersion := "2.12.13"
+ThisBuild / scalaVersion := "2.12.14"
 ThisBuild / useSuperShell := false
 ThisBuild / autoStartServer := false
 
