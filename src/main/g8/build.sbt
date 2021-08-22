@@ -10,11 +10,18 @@ lazy val `$name;format="norm"$` =
     .settings(commonSettings)
     .settings(dependencies)
 
-lazy val commonSettings = Seq(
+lazy val commonSettings =
+  compilerPlugins ++ commonScalacOptions ++ Seq(
+    update / evictionWarningOptions := EvictionWarningOptions.empty
+  )
+
+lazy val compilerPlugins = Seq(
   addCompilerPlugin(com.olegpy.`better-monadic-for`),
   addCompilerPlugin(org.augustjune.`context-applied`),
   addCompilerPlugin(org.typelevel.`kind-projector`),
-  update / evictionWarningOptions := EvictionWarningOptions.empty,
+)
+
+lazy val commonScalacOptions = Seq(
   Compile / console / scalacOptions := {
     (Compile / console / scalacOptions)
       .value
