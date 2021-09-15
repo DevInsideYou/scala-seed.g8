@@ -1,4 +1,4 @@
-ThisBuild / scalaVersion := "2.12.14"
+ThisBuild / scalaVersion := "2.12.15"
 ThisBuild / autoStartServer := false
 
 update / evictionWarningOptions := EvictionWarningOptions.empty
