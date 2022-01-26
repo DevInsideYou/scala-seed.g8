@@ -1,47 +1,47 @@
 import sbt._
 
 object Dependencies {
-  case object com {
-    case object github {
-      case object alexarchambault {
+  object com {
+    object github {
+      object alexarchambault {
         val `scalacheck-shapeless_1.15` =
           "com.github.alexarchambault" %% "scalacheck-shapeless_1.15" % "1.3.0"
       }
 
-      case object liancheng {
+      object liancheng {
         val `organize-imports` =
-          "com.github.liancheng" %% "organize-imports" % "0.5.0"
+          "com.github.liancheng" %% "organize-imports" % "0.6.0"
       }
     }
 
-    case object olegpy {
+    object olegpy {
       val `better-monadic-for` =
         "com.olegpy" %% "better-monadic-for" % "0.3.1"
     }
   }
 
-  case object org {
-    case object augustjune {
+  object org {
+    object augustjune {
       val `context-applied` =
         "org.augustjune" %% "context-applied" % "0.1.4"
     }
 
-    case object scalacheck {
+    object scalacheck {
       val scalacheck =
         "org.scalacheck" %% "scalacheck" % "1.15.4"
     }
 
-    case object scalatest {
+    object scalatest {
       val scalatest =
-        "org.scalatest" %% "scalatest" % "3.2.10"
+        "org.scalatest" %% "scalatest" % "3.2.11"
     }
 
-    case object scalatestplus {
+    object scalatestplus {
       val `scalacheck-1-15` =
-        "org.scalatestplus" %% "scalacheck-1-15" % "3.2.10.0"
+        "org.scalatestplus" %% "scalacheck-1-15" % "3.2.11.0"
     }
 
-    case object typelevel {
+    object typelevel {
       val `discipline-scalatest` =
         "org.typelevel" %% "discipline-scalatest" % "2.1.5"
 
