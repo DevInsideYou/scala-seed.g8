@@ -11,6 +11,7 @@ addCommandAlias("t", "test")
 addCommandAlias("r", "run")
 addCommandAlias("rs", "reStart")
 addCommandAlias("s", "reStop")
+addCommandAlias("star", "thankYouStars")
 addCommandAlias(
   "styleCheck",
   "scalafmtSbtCheck; scalafmtCheckAll; Test / compile; scalafixAll --check",
@@ -38,6 +39,7 @@ onLoadMessage +=
       |│ \${styled("r")}           │ run               │
       |│ \${styled("rs")}          │ reStart           │
       |│ \${styled("s")}           │ reStop            │
+      |│ \${styled("star")}        │ thankYouStars     │
       |│ \${styled("styleCheck")}  │ fmt & fix checks  │
       |│ \${styled("styleFix")}    │ fix then fmt      │
       |│ \${styled("up2date")}     │ dependencyUpdates │
