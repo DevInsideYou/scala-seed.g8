@@ -28,17 +28,17 @@ object Dependencies {
 
     object scalacheck {
       val scalacheck =
-        "org.scalacheck" %% "scalacheck" % "1.15.4"
+        "org.scalacheck" %% "scalacheck" % "1.16.0"
     }
 
     object scalatest {
       val scalatest =
-        "org.scalatest" %% "scalatest" % "3.2.11"
+        "org.scalatest" %% "scalatest" % "3.2.12"
     }
 
     object scalatestplus {
-      val `scalacheck-1-15` =
-        "org.scalatestplus" %% "scalacheck-1-15" % "3.2.11.0"
+      val `scalacheck-1-16` =
+        "org.scalatestplus" %% "scalacheck-1-16" % "3.2.12.0"
     }
 
     object typelevel {
