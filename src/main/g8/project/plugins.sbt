@@ -6,7 +6,7 @@ update / evictionWarningOptions := EvictionWarningOptions.empty
 
 addDependencyTreePlugin
 
-addSbtPlugin("ch.epfl.scala" % "sbt-scalafix" % "0.10.0")
+addSbtPlugin("ch.epfl.scala" % "sbt-scalafix" % "0.10.1")
 addSbtPlugin("com.github.sbt" % "sbt-git" % "2.0.0")
 addSbtPlugin("com.mayreh" % "sbt-thank-you-stars" % "0.2")
 addSbtPlugin("com.timushev.sbt" % "sbt-rewarn" % "0.1.3")
