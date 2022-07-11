@@ -43,7 +43,7 @@ object Dependencies {
 
     object typelevel {
       val `discipline-scalatest` =
-        "org.typelevel" %% "discipline-scalatest" % "2.1.5"
+        "org.typelevel" %% "discipline-scalatest" % "2.2.0"
 
       val `kind-projector` =
         "org.typelevel" %% "kind-projector" % "0.13.2" cross CrossVersion.full
