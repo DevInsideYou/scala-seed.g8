@@ -10,28 +10,35 @@ lazy val `$name;format="norm"$` =
     .settings(commonSettings)
     .settings(dependencies)
 
-lazy val commonSettings =
-  compilerPlugins ++ commonScalacOptions ++ Seq(
+lazy val commonSettings = {
+  lazy val commonCompilerPlugins = Seq(
+    addCompilerPlugin(com.olegpy.`better-monadic-for`),
+    addCompilerPlugin(org.augustjune.`context-applied`),
+    addCompilerPlugin(org.typelevel.`kind-projector`),
+  )
+
+  lazy val commonScalacOptions = Seq(
+    Compile / console / scalacOptions := {
+      (Compile / console / scalacOptions)
+        .value
+        .filterNot(_.contains("wartremover"))
+        .filterNot(Scalac.Lint.toSet)
+        .filterNot(Scalac.FatalWarnings.toSet) :+ "-Wconf:any:silent"
+    },
+    Test / console / scalacOptions :=
+      (Compile / console / scalacOptions).value,
+  )
+
+  lazy val otherCommonSettings = Seq(
     update / evictionWarningOptions := EvictionWarningOptions.empty
   )
 
-lazy val compilerPlugins = Seq(
-  addCompilerPlugin(com.olegpy.`better-monadic-for`),
-  addCompilerPlugin(org.augustjune.`context-applied`),
-  addCompilerPlugin(org.typelevel.`kind-projector`),
-)
-
-lazy val commonScalacOptions = Seq(
-  Compile / console / scalacOptions := {
-    (Compile / console / scalacOptions)
-      .value
-      .filterNot(_.contains("wartremover"))
-      .filterNot(Scalac.Lint.toSet)
-      .filterNot(Scalac.FatalWarnings.toSet) :+ "-Wconf:any:silent"
-  },
-  Test / console / scalacOptions :=
-    (Compile / console / scalacOptions).value,
-)
+  Seq(
+    commonCompilerPlugins,
+    commonScalacOptions,
+    otherCommonSettings,
+  ).reduceLeft(_ ++ _)
+}
 
 lazy val dependencies = Seq(
   libraryDependencies ++= Seq(
