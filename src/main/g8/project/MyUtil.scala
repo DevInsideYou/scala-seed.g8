@@ -3,15 +3,14 @@ import scala.sys.process._
 
 import sbt._
 
-object Util {
+object MyUtil {
   def styled(in: Any): String =
     scala.Console.CYAN + in + scala.Console.RESET
 
   def prompt(projectName: String): String =
-    gitPrompt
-      .fold(projectPrompt(projectName)) { g =>
-        s"\$g:\${projectPrompt(projectName)}"
-      }
+    gitPrompt.fold(projectPrompt(projectName)) { g =>
+      s"\$g:\${projectPrompt(projectName)}"
+    }
 
   private def projectPrompt(projectName: String): String =
     s"sbt:\${styled(projectName)}"

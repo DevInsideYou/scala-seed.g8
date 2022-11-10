@@ -1,4 +1,4 @@
-import Util._
+import MyUtil._
 
 addCommandAlias("l", "projects")
 addCommandAlias("ll", "projects")
