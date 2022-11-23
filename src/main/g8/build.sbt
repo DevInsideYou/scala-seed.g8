@@ -45,6 +45,7 @@ lazy val dependencies = Seq(
     // main dependencies
   ),
   libraryDependencies ++= Seq(
+    com.eed3si9n.expecty,
     com.github.alexarchambault.`scalacheck-shapeless_1.16`,
     org.scalacheck.scalacheck,
     org.scalatest.scalatest,

@@ -1,6 +1,7 @@
 package $package;format="lower,package"$
 package $name;format="lower,word"$
 
+import com.eed3si9n.expecty._
 import org.scalacheck.ScalacheckShapeless
 import org.scalatest._
 import org.scalatest.funsuite.AnyFunSuite
@@ -31,4 +32,7 @@ trait TestSuite
 
   final protected val Gen: org.scalacheck.Gen.type =
     org.scalacheck.Gen
+
+  final protected val expect: VarargsExpecty =
+    Expecty.expect
 }
