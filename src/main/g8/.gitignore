@@ -3,6 +3,7 @@
 .bloop/
 .bsp/
 .dotty-ide*
+.history/
 .idea/
 .metals/
 .scala-build/
