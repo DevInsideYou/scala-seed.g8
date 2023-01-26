@@ -3,8 +3,10 @@ import sbt._
 object Dependencies {
   object com {
     object eed3si9n {
-      val expecty =
-        "com.eed3si9n.expecty" %% "expecty" % "0.16.0"
+      object expecty {
+        val expecty =
+          "com.eed3si9n.expecty" %% "expecty" % "0.16.0"
+      }
     }
 
     object github {
