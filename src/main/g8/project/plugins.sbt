@@ -1,4 +1,3 @@
-ThisBuild / useSuperShell := false
 ThisBuild / autoStartServer := false
 
 update / evictionWarningOptions := EvictionWarningOptions.empty
