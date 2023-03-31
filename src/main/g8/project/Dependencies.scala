@@ -10,11 +10,6 @@ object Dependencies {
     }
 
     object github {
-      object alexarchambault {
-        val `scalacheck-shapeless_1.16` =
-          "com.github.alexarchambault" %% "scalacheck-shapeless_1.16" % "1.3.1"
-      }
-
       object liancheng {
         val `organize-imports` =
           "com.github.liancheng" %% "organize-imports" % "0.6.0"
@@ -35,25 +30,33 @@ object Dependencies {
 
     object scalacheck {
       val scalacheck =
-        "org.scalacheck" %% "scalacheck" % "1.16.0"
+        "org.scalacheck" %% "scalacheck" % "1.17.0"
     }
 
-    object scalatest {
-      val scalatest =
-        "org.scalatest" %% "scalatest" % "3.2.14"
-    }
+    object scalameta {
+      val munit =
+        moduleId("munit")
 
-    object scalatestplus {
-      val `scalacheck-1-16` =
-        "org.scalatestplus" %% "scalacheck-1-16" % "3.2.14.0"
+      val `munit-scalacheck` =
+        moduleId("munit-scalacheck")
+
+      private def moduleId(artifact: String): ModuleID =
+        "org.scalameta" %% artifact % "0.7.29"
     }
 
     object typelevel {
-      val `discipline-scalatest` =
-        "org.typelevel" %% "discipline-scalatest" % "2.2.0"
+      val `discipline-munit` =
+        "org.typelevel" %% "discipline-munit" % "1.0.9"
 
       val `kind-projector` =
         "org.typelevel" %% "kind-projector" % "0.13.2" cross CrossVersion.full
+    }
+  }
+
+  object tf {
+    object tofu {
+      val `derevo-scalacheck` =
+        "tf.tofu" %% "derevo-scalacheck" % "0.13.0"
     }
   }
 }

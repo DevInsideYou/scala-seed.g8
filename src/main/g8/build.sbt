@@ -1,4 +1,5 @@
 import Dependencies._
+import MyUtil._
 
 ThisBuild / organization := "$organization;format="lower,package"$"
 ThisBuild / scalaVersion := "2.13.10"
@@ -6,7 +7,15 @@ ThisBuild / scalaVersion := "2.13.10"
 lazy val `$name;format="norm"$` =
   project
     .in(file("."))
+    .dependsOn(macros % Cctt)
     .settings(name := "$name$")
+    .settings(commonSettings)
+    .settings(dependencies)
+    .aggregate(macros)
+
+lazy val macros =
+  project
+    .in(file("macros"))
     .settings(commonSettings)
     .settings(dependencies)
 
@@ -27,6 +36,16 @@ lazy val commonSettings = {
     },
     Test / console / scalacOptions :=
       (Compile / console / scalacOptions).value,
+    Test / scalacOptions +=
+      Seq(
+        "java.lang",
+        "scala",
+        "scala.Predef",
+        "derevo",
+        "derevo.scalacheck",
+        "org.scalacheck",
+        "org.scalacheck.Prop",
+      ).mkString(start = "-Yimports:", sep = ",", end = ""),
   )
 
   lazy val otherCommonSettings = Seq(
@@ -46,10 +65,10 @@ lazy val dependencies = Seq(
   ),
   libraryDependencies ++= Seq(
     com.eed3si9n.expecty.expecty,
-    com.github.alexarchambault.`scalacheck-shapeless_1.16`,
     org.scalacheck.scalacheck,
-    org.scalatest.scalatest,
-    org.scalatestplus.`scalacheck-1-16`,
-    org.typelevel.`discipline-scalatest`,
+    org.scalameta.`munit-scalacheck`,
+    org.scalameta.munit,
+    org.typelevel.`discipline-munit`,
+    tf.tofu.`derevo-scalacheck`,
   ).map(_ % Test),
 )

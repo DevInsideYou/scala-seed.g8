@@ -33,10 +33,7 @@ ThisBuild / shouldLint :=
 
 ThisBuild / wartremoverWarnings := {
   if (shouldLint.value)
-    Warts.allBut(
-      Wart.ImplicitConversion,
-      Wart.ImplicitParameter,
-    )
+    Seq.empty
   else
     (ThisBuild / wartremoverWarnings).value
 }
