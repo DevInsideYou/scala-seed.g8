@@ -1,6 +1,6 @@
 ThisBuild / autoStartServer := false
 
-// The std library FOR sbt is handled by sbt itself so no need to include it in the report.
+// The std library for sbt is handled by sbt itself so no need to include it in the report.
 dependencyUpdatesFilter -= moduleFilter(name = "scala-library")
 
 update / evictionWarningOptions := EvictionWarningOptions.empty
