@@ -4,6 +4,7 @@ package $name;format="lower,word"$
 import scala.Console._
 
 import com.eed3si9n.expecty.Expecty
+import munit.internal.console.StackTraces.dropInside
 
 trait Expectations {
   this: munit.FunSuite =>
@@ -74,9 +75,6 @@ trait Expectations {
       else s"\$RED\n\$clueWithSuffix\n\$expectyClue\$RESET"
     }
 
-    munit.internal.console.StackTraces.dropInside {
-      if (obtained == expected)
-        failComparison(calculatedClue, obtained, expected)
-    }
+    dropInside(if (obtained == expected) failComparison(calculatedClue, obtained, expected))
   }
 }
