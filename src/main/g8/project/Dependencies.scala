@@ -9,13 +9,6 @@ object Dependencies {
       }
     }
 
-    object github {
-      object liancheng {
-        val `organize-imports` =
-          "com.github.liancheng" %% "organize-imports" % "0.6.0"
-      }
-    }
-
     object olegpy {
       val `better-monadic-for` =
         "com.olegpy" %% "better-monadic-for" % "0.3.1"
