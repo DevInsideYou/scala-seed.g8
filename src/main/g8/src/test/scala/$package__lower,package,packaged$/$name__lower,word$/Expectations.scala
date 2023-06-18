@@ -6,6 +6,7 @@ import scala.Console._
 import com.eed3si9n.expecty.Expecty
 import munit.internal.console.StackTraces.dropInside
 
+@SuppressWarnings(Array("org.wartremover.warts.All"))
 trait Expectations {
   this: munit.FunSuite =>
   def expect(

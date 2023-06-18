@@ -6,6 +6,7 @@ import scala.reflect.macros.blackbox.Context
 
 import com.eed3si9n.expecty.Expecty
 
+@SuppressWarnings(Array("org.wartremover.warts.All"))
 object Macro {
   def expectWithoutClue(
     c: Context

@@ -7,6 +7,7 @@ package $name;format="lower,word"$
 // @derive(arbitrary)
 final case class Person(name: String, age: Int)
 
+@SuppressWarnings(Array("org.wartremover.warts.All"))
 final class ExampleSuite extends TestSuite {
   test("hello world") {
     forAll { (person: Person) =>
