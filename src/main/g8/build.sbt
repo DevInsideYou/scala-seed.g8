@@ -10,6 +10,7 @@ lazy val `$name;format="norm"$` =
     .dependsOn(macros % Cctt)
     .settings(name := "$name$")
     .settings(commonSettings)
+    .settings(autoImportSettings)
     .settings(dependencies)
     .aggregate(macros)
 
@@ -36,16 +37,6 @@ lazy val commonSettings = {
     },
     Test / console / scalacOptions :=
       (Compile / console / scalacOptions).value,
-    Test / scalacOptions +=
-      Seq(
-        "java.lang",
-        "scala",
-        "scala.Predef",
-        "derevo",
-        "derevo.scalacheck",
-        "org.scalacheck",
-        "org.scalacheck.Prop",
-      ).mkString(start = "-Yimports:", sep = ",", end = ""),
   )
 
   lazy val otherCommonSettings = Seq(
@@ -58,6 +49,24 @@ lazy val commonSettings = {
     otherCommonSettings,
   ).reduceLeft(_ ++ _)
 }
+
+lazy val autoImportSettings = Seq(
+  scalacOptions +=
+    Seq(
+      "java.lang",
+      "scala",
+      "scala.Predef",
+      "scala.annotation",
+      "scala.util.chaining",
+    ).mkString(start = "-Yimports:", sep = ",", end = ""),
+  Test / scalacOptions +=
+    Seq(
+      "derevo",
+      "derevo.scalacheck",
+      "org.scalacheck",
+      "org.scalacheck.Prop",
+    ).mkString(start = "-Yimports:", sep = ",", end = ""),
+)
 
 lazy val dependencies = Seq(
   libraryDependencies ++= Seq(
