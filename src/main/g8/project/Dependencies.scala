@@ -23,7 +23,7 @@ object Dependencies {
 
     object scalacheck {
       val scalacheck =
-        "org.scalacheck" %% "scalacheck" % "1.17.0"
+        "org.scalacheck" %% "scalacheck" % "1.18.0"
     }
 
     object scalameta {
@@ -34,7 +34,7 @@ object Dependencies {
         moduleId("munit-scalacheck")
 
       private def moduleId(artifact: String): ModuleID =
-        "org.scalameta" %% artifact % "1.0.0-M11"
+        "org.scalameta" %% artifact % "1.0.0-M12"
     }
 
     object typelevel {
