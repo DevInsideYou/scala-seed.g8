@@ -34,12 +34,12 @@ object Dependencies {
         moduleId("munit-scalacheck")
 
       private def moduleId(artifact: String): ModuleID =
-        "org.scalameta" %% artifact % "1.0.0-RC1"
+        "org.scalameta" %% artifact % "1.0.0"
     }
 
     object typelevel {
       val `discipline-munit` =
-        "org.typelevel" %% "discipline-munit" % "1.0.9"
+        "org.typelevel" %% "discipline-munit" % "2.0.0"
 
       val `kind-projector` =
         "org.typelevel" %% "kind-projector" % "0.13.3" cross CrossVersion.full
