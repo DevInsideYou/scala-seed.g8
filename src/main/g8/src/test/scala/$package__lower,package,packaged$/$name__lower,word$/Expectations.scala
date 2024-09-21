@@ -1,5 +1,5 @@
-package $package;format="lower,package"$
-package $name;format="lower,word"$
+package $package; format = "lower,package" $
+package $name; format = "lower,word" $
 
 import scala.Console._
 
@@ -69,8 +69,7 @@ trait Expectations {
         }
         catch Macro.ExtractMessage
 
-      val clueWithSuffix =
-        s"\${munitPrint(clue)} expected same: \$expected was not: \$obtained"
+      val clueWithSuffix = s"\${munitPrint(clue)} expected same: \$expected was not: \$obtained"
 
       if (expectyClue.isEmpty) clueWithSuffix
       else s"\$RED\n\$clueWithSuffix\n\$expectyClue\$RESET"
