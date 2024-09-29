@@ -14,11 +14,11 @@ addCommandAlias("s", "reStop")
 addCommandAlias("star", "thankYouStars")
 addCommandAlias(
   "styleCheck",
-  "scalafmtSbtCheck; scalafmtCheckAll; Test / compile; scalafixAll --check",
+  "scalafmtSbtCheck; scalafmtCheckAll; scalafixAll --check",
 )
 addCommandAlias(
   "styleFix",
-  "Test / compile; scalafixAll; scalafmtSbt; scalafmtAll",
+  "scalafixAll; scalafmtSbt; scalafmtAll",
 )
 addCommandAlias(
   "up2date",
