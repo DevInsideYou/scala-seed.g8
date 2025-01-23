@@ -28,7 +28,7 @@ object Dependencies {
 
     object scalameta {
       val munit =
-        "org.scalameta" %% "munit" % "1.0.4"
+        "org.scalameta" %% "munit" % "1.1.0"
 
       val `munit-scalacheck` =
         moduleId("munit-scalacheck")
