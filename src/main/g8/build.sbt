@@ -19,6 +19,7 @@ lazy val macros =
     .in(file("macros"))
     .settings(commonSettings)
     .settings(dependencies)
+    .settings(exportPipelining := false)
 
 lazy val commonSettings = {
   lazy val commonCompilerPlugins =

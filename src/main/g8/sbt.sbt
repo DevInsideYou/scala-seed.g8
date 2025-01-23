@@ -15,6 +15,7 @@ Test / turbo := true
 ThisBuild / autoStartServer := insideCI.value
 ThisBuild / includePluginResolvers := true
 ThisBuild / turbo := true
+ThisBuild / usePipelining := true
 
 ThisBuild / watchBeforeCommand := Watch.clearScreen
 ThisBuild / watchTriggeredMessage := Watch.clearScreenOnTrigger
