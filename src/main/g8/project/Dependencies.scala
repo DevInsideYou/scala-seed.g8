@@ -28,13 +28,13 @@ object Dependencies {
 
     object scalameta {
       val munit =
-        "org.scalameta" %% "munit" % "1.1.0"
+        moduleId("munit")
 
       val `munit-scalacheck` =
         moduleId("munit-scalacheck")
 
       private def moduleId(artifact: String): ModuleID =
-        "org.scalameta" %% artifact % "1.0.0"
+        "org.scalameta" %% artifact % "1.1.0"
     }
 
     object typelevel {
