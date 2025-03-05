@@ -49,7 +49,7 @@ object Dependencies {
   object tf {
     object tofu {
       val `derevo-scalacheck` =
-        "tf.tofu" %% "derevo-scalacheck" % "0.13.0"
+        "tf.tofu" %% "derevo-scalacheck" % "0.14.0"
     }
   }
 }
