@@ -33,7 +33,7 @@ ThisBuild / shouldLint :=
 
 ThisBuild / wartremoverWarnings := {
   if (shouldLint.value)
-    Seq.empty
+    Warts.unsafe
   else
     (ThisBuild / wartremoverWarnings).value
 }
