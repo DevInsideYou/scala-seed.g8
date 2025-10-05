@@ -14,6 +14,7 @@ Test / turbo := true
 
 ThisBuild / autoStartServer := insideCI.value
 ThisBuild / includePluginResolvers := true
+ThisBuild / resolvers += Resolver.scalaNightlyRepository
 ThisBuild / turbo := true
 ThisBuild / usePipelining := true
 
