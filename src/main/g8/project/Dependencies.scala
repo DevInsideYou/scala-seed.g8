@@ -42,7 +42,7 @@ object Dependencies {
         "org.typelevel" %% "discipline-munit" % "2.0.0"
 
       val `kind-projector` =
-        "org.typelevel" %% "kind-projector" % "0.13.3" cross CrossVersion.full
+        "org.typelevel" %% "kind-projector" % "0.13.4" cross CrossVersion.full
     }
   }
 
