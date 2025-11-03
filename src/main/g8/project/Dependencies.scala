@@ -5,7 +5,7 @@ object Dependencies {
     object eed3si9n {
       object expecty {
         val expecty =
-          "com.eed3si9n.expecty" %% "expecty" % "0.17.0"
+          "com.eed3si9n.expecty" %% "expecty" % "0.17.1"
       }
     }
 
