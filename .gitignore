@@ -11,3 +11,4 @@
 .vscode/
 metals.sbt
 target/
+!src/main/g8/.envrc

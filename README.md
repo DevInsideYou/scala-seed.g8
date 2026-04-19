@@ -7,19 +7,28 @@ All versions will always stay hardcoded as opposed to being chooseable or automa
 Configure your Scala dev environment [in minutes](https://github.com/devinsideyou/scala-seed)!
 
 ```bash
-sbt new devinsideyou/scala-seed.g8  # for Scala 2
+nix run github:devinsideyou/scala-seed # for Scala 3 (default)
 ```
 ```bash
-sbt new devinsideyou/scala3-seed.g8 # for Scala 3
+nix run github:devinsideyou/scala-seed -- devinsideyou/scala-seed # for Scala 2
 ```
 
 or
 
 ```bash
-g8 devinsideyou/scala-seed  # for Scala 2
+g8 devinsideyou/scala3-seed # for Scala 3
 ```
 ```bash
-g8 devinsideyou/scala3-seed # for Scala 3
+g8 devinsideyou/scala-seed  # for Scala 2
+```
+
+or
+
+```bash
+sbt new devinsideyou/scala3-seed.g8 # for Scala 3
+```
+```bash
+sbt new devinsideyou/scala-seed.g8  # for Scala 2
 ```
 
 [![Watch on YouTube](resources/thumbnail_youtube.jpg)](https://www.youtube.com/watch?v=nD-p-cEKjHE "Watch on YouTube")
