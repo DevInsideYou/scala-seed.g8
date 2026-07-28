@@ -9,7 +9,7 @@ addDependencyTreePlugin
 
 addSbtPlugin("ch.epfl.scala" % "sbt-scalafix" % "0.14.7")
 addSbtPlugin("com.mayreh" % "sbt-thank-you-stars" % "0.2")
-addSbtPlugin("com.timushev.sbt" % "sbt-rewarn" % "0.1.3")
+addSbtPlugin("com.timushev.sbt" % "sbt-rewarn" % "0.2.0")
 addSbtPlugin("com.timushev.sbt" % "sbt-updates" % "0.7.0")
 addSbtPlugin("io.spray" % "sbt-revolver" % "0.10.0")
 addSbtPlugin("org.scalameta" % "sbt-scalafmt" % "2.6.2")
