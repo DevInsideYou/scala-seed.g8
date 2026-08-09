@@ -34,7 +34,7 @@ object Dependencies {
         "org.scalameta" %% "munit-scalacheck" % "1.3.0"
 
       private def moduleId(artifact: String): ModuleID =
-        "org.scalameta" %% artifact % "1.3.4"
+        "org.scalameta" %% artifact % "1.3.5"
     }
 
     object typelevel {
