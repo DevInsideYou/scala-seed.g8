@@ -44,6 +44,12 @@ lazy val commonSettings = {
 
   lazy val otherCommonSettings =
     Seq(
+      // Scala 2 -> 3 is a migration, not an update. 2.13.x patches still show up.
+      dependencyUpdatesFilter -= moduleFilter(
+        organization = "org.scala-lang",
+        name = "scala-library",
+        revision = "3.*",
+      ),
       update / evictionWarningOptions := EvictionWarningOptions.empty,
       scalacOptions += s"-Wconf:src=\${target.value}/.*:s",
     )
