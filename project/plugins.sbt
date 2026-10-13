@@ -2,7 +2,7 @@ ThisBuild / autoStartServer := false
 
 update / evictionWarningOptions := EvictionWarningOptions.empty
 
-addSbtPlugin("com.timushev.sbt" % "sbt-updates" % "0.7.0")
+addSbtPlugin("com.timushev.sbt" % "sbt-updates" % "0.7.1")
 addSbtPlugin("org.foundweekends.giter8" %% "sbt-giter8" % "0.18.0")
 addSbtPlugin("org.scalameta" % "sbt-scalafmt" % "2.6.2")
 
